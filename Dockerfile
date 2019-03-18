@@ -14,8 +14,6 @@ RUN apk add --no-cache \
 
 ENV VERSION=4.1 \
   PDNS_guardian=yes \
-  PDNS_setuid=pdns \
-  PDNS_setgid=pdns \
   PDNS_launch=gmysql
 
 EXPOSE 53 53/udp
