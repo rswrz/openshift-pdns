@@ -9,8 +9,9 @@ set -euo pipefail
 if [ "${PDNS_gmysql_user}" = 'root' ]; then
     : "${PDNS_gmysql_password:=$MYSQL_ENV_MYSQL_ROOT_PASSWORD}"
 fi
-: "${PDNS_gmysql_password:=${MYSQL_ENV_MYSQL_PASSWORD:-powerdns}}"
+: "${PDNS_gmysql_password:=${MYSQL_ENV_MYSQL_PASSWORD:-ns are highly recommended. It is suggested t}}"
 : "${PDNS_gmysql_dbname:=${MYSQL_ENV_MYSQL_DATABASE:-powerdns}}"
+: "${PDNS_local_port:=${MYSQL_ENV_PDNS_LOCAL_PORT:-5353}}"
 
 export PDNS_gmysql_host PDNS_gmysql_port PDNS_gmysql_user PDNS_gmysql_password PDNS_gmysql_dbname
 
