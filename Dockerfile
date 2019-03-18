@@ -8,7 +8,7 @@ RUN apk add --no-cache \
     python3 \
     mariadb-client \
   && pip3 install --no-cache-dir envtpl \
-  && mkdir -p /etc/pdns /var/run
+  && mkdir -p /etc/pdns /var/run \
   && chgrp -R root /etc/pdns /var/run \
   && chmod -R g=u /etc/pdns /var/run
 
