@@ -17,7 +17,7 @@ ENV VERSION=4.1 \
   PDNS_launch=gmysql \
   PDNS_local_port=5353
 
-EXPOSE 53 53/udp
+EXPOSE 5353 5353/udp
 
 COPY pdns.conf.tpl /
 COPY docker-entrypoint.sh /
