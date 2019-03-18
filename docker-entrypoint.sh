@@ -17,10 +17,6 @@ export PDNS_gmysql_host PDNS_gmysql_port PDNS_gmysql_user PDNS_gmysql_password P
 # Create config file from template
 envtpl < /pdns.conf.tpl > /etc/pdns/pdns.conf
 
-# Grant permissions to run in openshift (random uid)
-chgrp -R root /etc/pdns
-chmod -R g-u /etc/pdns
-
 # Initialize DB if needed
 MYSQL_COMMAND="mysql -h ${PDNS_gmysql_host} -P ${PDNS_gmysql_port} -u ${PDNS_gmysql_user} -p${PDNS_gmysql_password}"
 
