@@ -14,7 +14,8 @@ RUN apk add --no-cache \
 
 ENV VERSION=4.1 \
   PDNS_guardian=yes \
-  PDNS_launch=gmysql
+  PDNS_launch=gmysql \
+  PDNS_local_port=5353
 
 EXPOSE 53 53/udp
 
